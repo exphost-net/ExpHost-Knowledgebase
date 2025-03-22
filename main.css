@@ -202,7 +202,6 @@ main {
   /*Ensuresproperclickablearea*/text-decoration: none;
   /*Removesunderline*/color: inherit;
   /*Keepstextcolorconsistent*/background: white;
-  padding: 20px;
   text-shadow: 0 0 15px rgba(104, 147, 236, 0.5);
   background: linear-gradient(to right, rgba(104, 148, 236, 0.815), rgba(206, 66, 245, 0.815));
   border-radius: 4px;
@@ -212,6 +211,12 @@ main {
   transition: transform 0.3s, background 0.5s ease-in-out;
   cursor: pointer;
   text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+  margin: 0 20px;
 }
 
 .category:hover {
