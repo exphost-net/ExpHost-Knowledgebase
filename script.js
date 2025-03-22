@@ -11,16 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
         { title: "Panel Issues", url: "articles/panel.html" }
     ];
 
-    searchBox.addEventListener("input", function() {
-        const query = searchBox.value.toLowerCase();
+    function updateSearchResults(query) {
         searchResults.innerHTML = "";
         searchResults.style.display = "none";
 
-        if (query.trim() !== "") {
-            const filteredArticles = articles.filter(article =>
-                article.title.toLowerCase().includes(query)
-            ).slice(0, 4);
+        const filteredArticles = query.trim() === "" 
+            ? articles.slice(0, 4) 
+            : articles.filter(article => article.title.toLowerCase().includes(query)).slice(0, 4);
 
+        if (filteredArticles.length > 0) {
             filteredArticles.forEach(article => {
                 const li = document.createElement("li");
                 const a = document.createElement("a");
@@ -36,6 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 searchResults.style.opacity = "1";
             }, 10);
         }
+    }
+
+    searchBox.addEventListener("input", function() {
+        updateSearchResults(searchBox.value.toLowerCase());
+    });
+
+    searchBox.addEventListener("focus", function() {
+        updateSearchResults(""); // Show full list when clicking
     });
 
     document.addEventListener("click", function(event) {
