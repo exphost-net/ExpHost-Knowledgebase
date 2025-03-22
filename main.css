@@ -181,10 +181,8 @@ main {
     border: 1px solid #ced4da;
     background: var(--search-color);
     border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .categories {
