@@ -185,6 +185,11 @@ main {
     font-family: 'Poppins', sans-serif;
 }
 
+.searchResults {
+    text-decoration: none;
+    color: white;
+}
+
 .categories {
     display: flex;
     flex-wrap: wrap;
