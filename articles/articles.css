@@ -216,6 +216,32 @@ main {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
+.categoryarticle {
+  display: inline-block;
+  /*Ensuresproperclickablearea*/text-decoration: none;
+  /*Removesunderline*/color: inherit;
+  /*Keepstextcolorconsistent*/background: white;
+  padding: 20px;
+  text-shadow: 0 0 15px rgba(104, 147, 236, 0.5);
+  background: linear-gradient(to right, rgba(104, 148, 236, 0.815), rgba(206, 66, 245, 0.815));
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, background 0.5s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.categoryarticle:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
 
 footer {
     padding: 60px 0;

@@ -72,6 +72,7 @@ style.textContent = `
         overflow-y: auto;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
+        font-family: 'Poppins', sans-serif;
     }
     .search-results li {
         padding: 10px;
